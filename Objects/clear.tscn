@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b0qsw00klxike"]
+
+[ext_resource type="Script" uid="uid://dp2or1i35xwd8" path="res://Objects/clear.gd" id="1_hte2u"]
+
+[node name="Node2D" type="Node2D" unique_id=756264685]
+script = ExtResource("1_hte2u")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1373400985]
+z_index = 200
+offset_left = 8.0
+offset_right = 1289.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="header" type="Label" parent="." unique_id=1596998724]
+z_index = 200
+offset_left = 0.0
+offset_top = 216.0
+offset_right = 1280.0
+offset_bottom = 353.0
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 100
+text = "You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1993262848]
+z_index = 200
+offset_left = 0.0
+offset_top = 360.0
+offset_right = 1280.0
+offset_bottom = 415.0
+theme_override_font_sizes/font_size = 40
+text = "Target Berhasil Dicapai!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="." unique_id=1446833456]
+z_index = 200
+offset_left = 0.0
+offset_top = 432.0
+offset_right = 1280.0
+offset_bottom = 474.0
+theme_override_font_sizes/font_size = 30
+text = "Clear Time 00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1

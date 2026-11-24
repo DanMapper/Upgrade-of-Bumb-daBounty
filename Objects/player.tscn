@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dljjww1jvtdsp"]
+
+[ext_resource type="Script" uid="uid://bkdnu7fg3begv" path="res://scripts/player.gd" id="1_3y5cq"]
+[ext_resource type="Script" uid="uid://daf58g5hy410g" path="res://scripts/player_animation.gd" id="3_0ad8t"]
+[ext_resource type="Texture2D" uid="uid://cqqta1qsg77a4" path="res://Assets/pesawat player idle-spritesheet.png" id="3_2i4gt"]
+[ext_resource type="AudioStream" uid="uid://bgr0dq4qbkdoe" path="res://audio/laser.mp3" id="4_0ad8t"]
+[ext_resource type="AudioStream" uid="uid://bw1se0l17t7t2" path="res://audio/damage.mp3" id="5_x20fu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_slvoo"]
+radius = 2.9999998
+height = 25.199999
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ad8t"]
+atlas = ExtResource("3_2i4gt")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x20fu"]
+atlas = ExtResource("3_2i4gt")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ar0x"]
+atlas = ExtResource("3_2i4gt")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slvmq"]
+atlas = ExtResource("3_2i4gt")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng3n2"]
+atlas = ExtResource("3_2i4gt")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slvoo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ad8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x20fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ar0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slvmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng3n2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=2038570811]
+scale = Vector2(5, 5)
+collision_mask = 4
+script = ExtResource("1_3y5cq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127232302]
+z_index = 1
+z_as_relative = false
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_slvoo")
+
+[node name="Player_animation" type="AnimatedSprite2D" parent="." unique_id=367026779]
+z_index = 1
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_slvoo")
+animation = &"idle"
+script = ExtResource("3_0ad8t")
+
+[node name="LaserSound" type="AudioStreamPlayer" parent="." unique_id=1613923046]
+stream = ExtResource("4_0ad8t")
+
+[node name="damagesound" type="AudioStreamPlayer2D" parent="." unique_id=1621748478]
+stream = ExtResource("5_x20fu")
