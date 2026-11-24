@@ -1,6 +1,6 @@
 # Bumbdabounty
 
-Ini versi Bumbdabounty yang aku kembangkan lebih lanjut dari game awal tim kami. Aku memperbarui tampilan HUD, menambah variasi rintangan, dan membuat mode Hard lebih menantang.
+Ini versi Bumbdabounty yang aku kembangkan lebih lanjut dari game awal tim kami. Saya memperbarui tampilan HUD, menambah variasi rintangan, dan membuat mode Hard lebih menantang.
 
 ## 2D Game CCI THE HACK
 
